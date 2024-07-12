@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>multiple choice questions</h3>
+    <label for="q1">1. HTML stands for?</label><br>
+    <input type="radio" id="q1" name="q1">Hyperlink markup language<br>
+    <input type="radio" id="q1" name="q1">Hypertext markup language<br>
+    <input type="radio" id="q1" name="q1">Hypersize markup language<br>
+    <input type="radio" id="q1" name="q1">Hyperloop markup language<br><br>
+
+    <label for="q2">2. capital city of india?</label><br>
+    <input type="radio" id="q2" name="q2">mumbai<br>
+    <input type="radio" id="q2" name="q2">bangalore<br>
+    <input type="radio" id="q2" name="q2">delhi<br>
+    <input type="radio" id="q2" name="q2">pune<br><br>
+
+    <h3>checkboxes</h3>
+    <label for="q3">1. select fruites from given options</label><br>
+    <input type="checkbox" id="q3" name="q3">mango<br>
+    <input type="checkbox" id="q3" name="q3">tomato<br>
+    <input type="checkbox" id="q3" name="q3">banana<br>
+    <input type="checkbox" id="q3" name="q3">onion<br><br>
+
+    <label for="q4">2. select programing languages from given options</label><br>
+    <input type="checkbox" id="q4" name="q4">java<br>
+    <input type="checkbox" id="q4" name="q4">mathematics<br>
+    <input type="checkbox" id="q4" name="q4">python<br>
+    <input type="checkbox" id="q4" name="q4">html<br><br>
+
+    <h3>answer the following</h3>
+    <label for="q5">1.what is an HTML?</label><br>
+    <input type="text" id="q5" name="q5" ><br>
+
+    <label for="q6">2.what is css?</label><br>
+    <input type="text" id="q6" name="q6" ><br><br>
+
+    <label for="q6">3.what is the use of html and css?</label><br>
+    <textarea id="q6" name="q6" rows="5" cols="50"></textarea><br><br>
+
+    <label for="q7">rate my programing knowledge</label>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><br>
+
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+
+    <style>
+        .checked {
+          color: orange;
+        }
+        .dropbtn {
+          background-color: #3498DB;
+          color: white;
+          padding: 16px;
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
+        }
+        
+        .dropbtn:hover, .dropbtn:focus {
+          background-color: #2980B9;
+        }
+        
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 160px;
+          overflow: auto;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        
+        .dropdown a:hover {background-color: #ddd;}
+        
+        .show {display: block;}
+        </style>
+        </head>
+        <body style="background-color:white;">
+        
+        <h2>Clickable Dropdown</h2>
+        <p>Click on the button to open the dropdown menu.</p>
+        
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+        <script>
+            /* When the user clicks on the button, 
+            toggle between hiding and showing the dropdown content */
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+            
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+            </script>
+
+    <link rel="stylesheet" href="task6.css">
+</body>
+</html>
