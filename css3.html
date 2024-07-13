@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css selectors</title>
+    <style>
+        .main{
+            background-color: aqua;
+            text-align: center;
+            font-family: 'Times New Roman';
+            color: brown;
+        }
+        #abc{
+            text-transform: capitalize;
+            color: black;
+            background-color: darkgray;
+            text-align: center;
+        }
+        h2{
+            background-color: darksalmon;
+            text-align: center;
+
+        }
+        h4, p{
+            background-color: beige;
+            text-align: center;
+            text-transform: capitalize;
+
+        }
+        a:hover{
+            text-align: center;
+            color: #FF00FF;
+            background-color: azure;
+            text-transform: capitalize;
+        }
+        .mm p::first-letter{
+            font-size: xx-large;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: red;
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <div class="main">
+        <h3>this is class selector</h3>
+        <p> In CSS, a class selector is formatted as a period (.) character followed by the name of the class. It selects all elements with that class attribute so that unique CSS declarations can be applied to those specific elements without affecting other elements on the page.</p>
+       
+    </div>
+    <div id="abc">
+        <h3>this is the id selector</h3>
+        <p>The id selector uses the id attribute of an HTML element to select a specific element.
+            The id of an element is unique within a page, so the id selector is used to select one unique element!</p>
+
+    </div>
+    <h2>This is element selector</h2>
+    <p></p>
+    <div>
+    <h4>this is grouping selector</h4>
+    <p>
+        The grouping selector selects all the HTML elements with the same style definitions.</p>
+    
+    <a href="https://ultimez.com/" alt="ultimez">THIS IS A PSEUDO-CLASS SELECTOR</a></div>
+   
+       <div class="mm"> <p>THIS IS A PSEUDO-ELEMENT SELECTOR<br>
+        this is used to style the specific part of data</p></div>
+        
+</body>
+</html>
