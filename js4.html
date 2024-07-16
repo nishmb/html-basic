@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: blanchedalmond;
+            margin: 50px;
+            color: #000;
+            font-style: italic;
+            
+        }
+    </style>
+    <script>
+        function analyzeString(inputString){
+            const length =inputString.length;
+            const lowerCase =inputString.toLowerCase();
+            const upperCase =inputString.toUpperCase();
+            const containsJavaScript =inputString.includes("JavaScript");
+            const countA = (inputString.match(/a/g) || []).length;
+
+            return{
+                length: length,
+                lowerCase: lowerCase,
+                upperCase: upperCase,
+                containsJavaScript: containsJavaScript,
+                countA: countA
+
+            };
+        }
+        function analyze() {
+            const inputString = document.getElementById('inputString').value;
+            const result = analyzeString(inputString);
+
+            document.getElementById('length').textContent = `Length: ${result.length}`;
+            document.getElementById('lowerCase').textContent = `LowerCase: ${result.lowerCase}`;
+            document.getElementById('upperCase').textContent = `UpperCase: ${result.upperCase}`;
+            document.getElementById('containsJavaScript').textContent = `Contains a "JavaScript": ${result.containsJavaScript}`;
+            document.getElementById('countA').textContent = `Count of 'A' : ${result.countA}`;
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Analyze String</h1>
+    <label for="inputString">Enter a string:</label>
+    <input type="text" id="inputString">
+    <button onclick="analyze()">Analyze</button>
+    <div id="results">
+        <p id="length"></p>
+        <p id="lowerCase"></p>
+        <p id="upperCase"></p>
+        <p id="containsJavaScript"></p>
+        <p id="countA"></p>
+    </div>
+</body>
+</html>
