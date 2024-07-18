@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>array examples continued</h3>
+    <button type="button" onclick="myFunc()">click hear</button>
+    <script>
+        function myFunc(){
+            const names = ["John","Jane","Doe","Alice", "Bob"];
+
+            console.log(names.join('\r\n'));
+
+            names.push("Eve")
+            console.log(names);
+
+            names.sort();
+            console.log(names);
+
+            if(names.includes("Alice")){
+                console.log("Alice is present")
+            }
+            else{
+                console.log("Alice is not present")
+            }
+            
+
+
+
+        }
+    </script>
+</body>
+</html>
