@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>JavaScript objects, sets and maps</h3>
+    <button type="button" onclick="myFunc()">chick here</button>
+    <script>
+        function myFunc(){
+            var data = {
+                Name: "Ram",
+                Age: "50",
+                Gender: "male",
+                occupation: "businessman",
+                fullname: function () {
+                    return this.Name +" "+ this.Age +" "+ this.Gender +" "+ this.occupation
+
+                }
+
+            }
+            console.log(data.Name);
+            console.log(data.Age);
+            console.log(data.Gender);
+            console.log(data.occupation);
+
+
+            var data1 ={
+                Name: "seeta",
+                Age: "45",
+                Gender: "female",
+                occupation: "teacher",
+                fullname: function () {
+                return this.Name +" "+ this.Age +" "+ this.Gender +" "+ this.occupation
+            }
+            
+        }
+        console.log(data1.Name);
+        console.log(data1.Age);
+        console.log(data1.Gender);
+        console.log(data1.occupation);
+    
+
+        let numbers = new Set([1,2,3,4,4,5,6,6,7]);
+        numbers.size;
+        console.log(numbers);
+
+        let num2 = new Set([9,2,3,4,5]);
+
+        let union = new Set([...numbers, ...num2]);
+        console.log(union);
+
+        let intersect = new Set([...numbers].filter(x => num2.has(x)));
+        console.log(intersect);
+
+        const Set1 = new Set(numbers);
+        const Set2 = new Set(num2);
+
+        let difference = new Set(Set1);
+            for( const element of Set2){
+                difference.delete(element);
+                
+            }
+            console.log([...difference]);
+
+            console.log(num2.isSubsetOf(numbers));
+
+            var dataa = new Map([
+                ["apples", 500],
+                ["orange", 300],
+                ["banana", 400]
+            ])
+            dataa.set("mango", 200);
+            console.log(dataa);
+            dataa.delete("apples", 500);
+            
+            console.log(dataa);
+        }
+       
+    
+    </script>
+</body>
+</html>
