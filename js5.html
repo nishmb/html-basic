@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-style: italic;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 50px 0px;
+            padding: 50px;
+            color: maroon;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <h3>A JavaScript array example</h3>
+    <button type="button" onclick="myFunc()">CLICK HERE</button>
+    <script>
+        function myFunc(){
+            const numbers = [10, 5, 8, 3, 12, 6];
+
+            console.log(numbers.length);
+
+            numbers.push(7);
+            console.log(numbers);
+
+            numbers.shift();
+            console.log(numbers);
+
+            numbers.sort();
+            console.log(numbers);
+
+            numbers.reverse();
+            console.log(numbers);
+
+            if(numbers.includes(8)){
+                console.log("number 8 exists");
+            }
+            else{
+                console.log("number 8 doesn't exist");
+            }
+
+            let index = numbers.indexOf(12);
+            console.log(index);
+            
+            const doubledNumbers = numbers.concat(numbers);
+            
+            console.log(doubledNumbers);
+
+        }
+    </script>
+</body>
+</html>
