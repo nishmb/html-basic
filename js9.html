@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>conditional and looping statements</h3>
+    <button type="button" onclick="myFunc()">click here</button>
+    <script>
+        function myFunc(){
+
+            //if condition
+            let gender = "male"
+            if(gender = "male"){
+                console.log("he is a boy")
+            }
+
+            //if else condition
+            let gender1 = "female"
+            if(gender1 != "female"){
+                console.log("he is a boy")
+            }else{
+                console.log("she is a girl")
+            }
+
+            //if else-if else condition
+            let num = -1
+            if(num > 0){
+                console.log("number is positive")
+            } else if(num < 0){
+                console.log("number is negative")
+            }else{
+                console.log("number is zero")
+            }
+
+            //switch condition
+            let month = "july"
+            switch(month){
+                case "july" :
+                    console.log("This is july")
+                    break
+                case "august" :
+                    console.log("This is august")
+                    break
+                default :
+                console.log("This is neither june nor august")
+            }
+
+
+            //for loop
+            for(i = 0; i<5; i++){
+                console.log(i);
+            }
+
+            //for-in loop
+            const details = {company_name: "Ultimez", course: "JS"}
+            for(const key in details) {
+                console.log(key + ":" + details[key])
+            }
+
+            //for-of loop
+            const colors = ["pink", "black", "white"]
+            for (eachColors of colors){
+                console.log(eachColors)
+            }
+
+            //while loop
+            let count = 1
+            while(count<5){
+                console.log(count)
+                count++
+            }
+
+            //do while loop
+            let number = 0
+            do{
+                console.log(number)
+                number++
+            }while(number<3)
+
+        }
+    </script>
+</body>
+</html>
