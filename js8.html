@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>dates and regex</h3>
+    <button type="button" onclick="myFunc()">click me</button>
+    <script>
+        function myFunc(){
+            const currentDate = new Date();
+            console.log(currentDate);
+
+            const specificDate = new Date('2024-4-15T012:00:00');
+            console.log(specificDate);
+
+            const usingMS = new Date('1619743440000');
+            console.log(usingMS);
+
+            const date = new Date();
+            console.log(date);
+
+            const year = date.getFullYear();
+            console.log(year);
+
+            const month = date.getMonth();
+            console.log(month);
+
+            const day = date.getDay();
+            console.log(day);
+
+            const hours = date.getHours();
+            console.log(hours);
+
+            const minute = date.getMinutes();
+            console.log(minute);
+
+            const sec = date.getSeconds();
+            console.log(sec);
+
+            const milisec = date.getMilliseconds();
+            console.log(milisec);
+
+            const formattedDate = date.toLocaleDateString('en-US');
+            console.log(formattedDate);
+
+            date.setDate(date.getDate() + 7);
+            console.log(date);
+
+
+            const date1 = new Date('2024-4-15');
+            const date2 = new Date('2024-5-15');
+
+            if(date1 < date2){
+                console.log("date 1 is earlier than date 2")
+            }
+
+            console.log("Regex");
+
+            let pattern = /dog/
+            let string = "I have a dog and his name is stuffy"
+            console.log(pattern.test(string));
+
+            let pattern1 = /\b[Cc]\w+/g
+            let string1 = "Cat and dog are animals. cow is also animal"
+            console.log(string1.match(pattern1));
+
+            let pattern2 = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+            let string2 = "myemail@ultimez123.com"
+            console.log(pattern2.test(string2))
+                }
+    </script>
+</body>
+</html>
