@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 50px 0px;
+            padding: 50px;
+            background-color: antiquewhite;
+            color: black;
+            font-style: italic;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body>
+    <h3>JavaScript callbacks and asynchronous</h3>
+    <script>
+        function calculate(num1, num2, operation, callback){
+            let result;
+            switch(operation){
+                case 'add':
+                    result = num1 + num2;
+                    break
+                case 'subtract' :
+                    result = num1 - num2;
+                    break
+                case 'multiply': 
+                    result = num1 * num2;
+                    break
+                case 'divide' : 
+                    if(num2 !== 0){
+                      result = num1 / num2;
+                    }else{
+                        return callback("Error:Division by Zero")
+                    }
+                    break     
+                default : 
+                return callback("Error: Invalid operation");
+            }
+            callback(result)
+        }
+        function printResult(result){
+            console.log(`The result is: ${result}`)
+        }
+        
+
+        calculate(15, 3, 'add', printResult);
+        calculate(27, 12, 'subtract', printResult);
+        calculate(225, 5, 'multiply', printResult);
+        calculate(10, 0, 'divide', printResult);
+        calculate(10, 5, 'modulus', printResult);
+    </script>
+</body>
+</html>
